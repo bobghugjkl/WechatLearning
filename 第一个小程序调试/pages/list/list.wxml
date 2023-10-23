@@ -1,0 +1,110 @@
+<!--pages/list/list.wxml-->
+<!--类似于标签，类似网页布局
+标签名称：WXML(view,text,image,navigator)
+属性节点：<navigator url="/pages/home"></navigator类似于跳转超链接-->
+<!--pages/list.wxml-->
+<!-- 完成可视化滚动窗口 -->
+<!-- 可视化窗口使用view组件！ -->
+<!-- 纵向滚动使用scroll-view组件！ -->
+<!-- scroll-y属性：允许纵向滚动 -->
+<!-- scroll-x属性：允许横向滚动 -->
+<!-- 注意：使用竖向滚动时，必须给scroll-view一个固定高度 -->
+<!-- 接下来实施其纵向滚动的的事例！ -->
+<!-- 原来的类目：<view class="container1"> -->
+  
+  <!-- 现在的（可上下滚动）<scroll-view class="container1"scroll-y> -->
+<!--view即可视化窗口，刚开始是占一行的  -->
+  <!-- <view>A</view> -->
+  <!-- <view>B</view> -->
+  <!-- <view>C</view> -->
+<!-- 现结尾（可滚动）</scroll-view> -->
+<!-- 原结尾</view> -->
+
+<!-- 轮播图效果要用到swiper组件！ -->
+<!-- swiper组件常用属性：使用方法可以参考下面的样例
+属性                      类型          默认值          说明
+indicator-dots           boolean     false          是否显示面板指示点
+indicator-color          color      rgba(0,0,0,-3)   指示点的颜色
+indicator-active-color   color      #000000         当前选中指示点的颜色
+autoplay                 boolean    false           是否自动切换
+interval                 number     5000(毫秒)            自动切换时间间隔
+circular(可以什么都不加)  boolean    false           是否采取衔接滑动-->
+<!-- 文本一般是item indicator-dots属性：显示面板指示点 -->
+<swiper class="swiper-container" indicator-dots indicator-color="white" indicator-active-color="gray" autoplay interval="3000" circular>
+  <!-- 第一项 -->
+  <swiper-item>
+    <view class="item">A</view>
+  </swiper-item>
+  <!-- 第二项 -->
+  <swiper-item>
+    <view class="item">B</view>
+  </swiper-item>
+  <!-- 第三项 -->
+  <swiper-item>
+    <view class="item">C</view>
+  </swiper-item>
+</swiper>
+<!-- 常用的基础组件text和rich-text的用法 -->
+<view>
+  手机号支持长按选中效果(只能通过手机选中)
+  <text selectable>13800005056</text>
+</view>
+<!-- 应用场景：商品详情页的结构渲染 -->
+<rich-text nodes="<h1 style='color:red;'>标题<h1>"></rich-text>
+<!-- 按钮组件的基本使用 -->
+<view>~~~~~通过type指定按钮类型~~~~~</view>
+
+<button>普通按钮</button>
+<button type="primary">主色调按钮</button>
+<button type="warn">警告按钮</button>
+
+<view>~~~~~size="mini"小尺寸按钮~~~~~</view>
+
+<button size="mini">普通按钮</button>
+<button type="primary" size="mini">主色调按钮</button>
+<button type="warn" size="mini">警告按钮</button>
+
+<view>~~~~~plain镂空按钮~~~~~</view>
+
+<button size="mini" plain>普通按钮</button>
+<button type="primary" size="mini" plain>主色调按钮</button>
+<button type="warn" size="mini" plain>警告按钮</button>
+
+<!-- image图片组件 -->
+<image></image>
+<image src="/images/apic27858.jpeg" mode="aspectFill"></image>
+
+
+
+<!-- 第二天内容 -->
+<view>{{info}}</view>
+<image src="{{imgSrc}}" mode="widthFix"></image>
+<view>{{ randomNumber>=5?'随机数字大于或等于5':'随机数字小于5'}}</view>
+<view>{{randomNum1*100}}</view>
+
+
+
+
+
+
+
+
+
+<!-- 第三天内容 -->
+<view class="outer-view" bindtap="outerHandler">
+  <button type="primary">按钮</button>
+</view>
+<button type="primary" bindtap="btnTapHandler">按钮</button>
+
+
+
+
+
+
+
+
+
+
+<!-- 第四天 -->
+<button type="primary" bindtap="CountChange">+1</button>
+<button type="primary" bindtap="btntap2" date-info="{{2}}">+2</button>

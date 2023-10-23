@@ -1,0 +1,32 @@
+/* pages/list/list.wxss */
+/* pages/list.wxss */
+.container1 view{
+  /* 接下来四行分别是设置我们前面的三个窗口的宽，高，居中显示以及纵向居中（行高） */
+  width: 100px;
+  height:100px;
+  text-align: center;
+  line-height: 100px;
+}
+
+/* 为三个盒子分别设置颜色 */
+.container1 view:nth-child(1){
+  background-color: lightgreen;
+}
+.container1 view:nth-child(2){
+  background-color: lightskyblue;
+}
+.container1 view:nth-child(3){
+  background-color: lightpink;
+}
+
+/* .是指类名选择器，接下来第一行是让它们三个盒子都在同一行，第二行是让它们分散居中 */
+.container1{
+  /* border设置边框设置宽和高 */
+  /* width：改变高度 */
+  /* height：限定高度以实现纵向滚动 */
+  border: 1px solid red; 
+  width:100px;
+  height:120px;
+  display:flex;
+  justify-content: space-around;
+}

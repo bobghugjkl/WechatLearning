@@ -1,0 +1,58 @@
+/* pages/list/list.wxss */
+/* 美化界面类似网页中css支持rpx会自动换算单位
+局部样式和全局样式（app.wxss可对所有页面生效） */
+/* pages/list.wxss */
+
+ /* .container1 view{
+   接下来四行分别是设置我们前面的三个窗口的宽，高，居中显示以及纵向居中（行高） 
+  width: 100px;
+  height:100px;
+  text-align: center;
+  line-height: 100px;
+}  */
+
+
+/* 为三个盒子分别设置颜色 */
+/* .container1 view:nth-child(1){
+  background-color: lightgreen;
+}
+.container1 view:nth-child(2){
+  background-color: lightskyblue;
+}
+.container1 view:nth-child(3){
+  background-color: lightpink;
+} */
+
+/* .是指类名选择器，接下来第一行是让它们三个盒子都在同一行，第二行是让它们分散居中 */
+/* .container1{ */
+  /* border设置边框设置宽和高 */
+  /* width：改变高度 */
+  /* height：限定高度以实现纵向滚动 */
+  /* border: 1px solid red; 
+  width:100px;
+  height:120px;
+  display:flex;
+  justify-content: space-around;
+} */
+/* 轮播图样式 */
+.swiper-container{
+  height:150px;
+}
+.item{
+  height: 100%;
+  line-height: 150px;
+  text-align: center;
+}
+swiper-item:nth-child(1) .item{
+  background-color: lightgreen;
+}
+swiper-item:nth-child(2) .item{
+  background-color: lightsalmon;
+}
+swiper-item:nth-child(3) .item{
+  background-color: lightseagreen;
+}
+/*为图片设置边框*/
+image{/*全选所有照片*/
+  border: 1px solid red;
+}
